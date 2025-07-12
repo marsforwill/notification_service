@@ -113,17 +113,37 @@ registry.process_event("user_signup", {
 notification_service/
 ├── src/                    # Source code
 │   ├── channels/          # Notification channels
+│   │   ├── base.py        # Abstract base class
+│   │   ├── email.py       # Email channel (file-based)
+│   │   └── slack.py       # Slack channel (console-based)
 │   ├── templates/         # Template engine
+│   │   ├── base.py        # Abstract template engine
+│   │   └── jinja2_engine.py # Jinja2 implementation
 │   ├── events/            # Event sources
+│   │   ├── base.py        # Abstract event source
+│   │   ├── realtime.py    # Real-time events
+│   │   └── scheduled.py   # Scheduled SQL queries
 │   ├── deduplication/     # Deduplication strategies
+│   │   ├── base.py        # Abstract deduplication policy
+│   │   └── content_based.py # Content-based deduplication
 │   ├── registry/          # Notification registry
+│   │   └── notification_registry.py # Central configuration
 │   └── core/              # Core models and container
-├── templates/             # Template files
+│       ├── models.py      # Data models and types
+│       └── container.py   # Dependency injection
+├── templates/             # Jinja2 template files
+│   ├── welcome_email.txt  # User signup email
+│   ├── daily_stats.txt    # Daily statistics report
+│   └── slack_welcome.txt  # Slack welcome message
 ├── examples/              # Usage examples
+│   └── usage_examples.py  # Complete examples
 ├── tests/                 # Test files
-├── demo.py               # Demo script
-├── DOCUMENTATION.md      # Detailed documentation
-└── README.md            # Project description
+│   └── test_notification_service.py # Unit tests
+├── demo.py               # Quick demo script
+├── DOCUMENTATION.md      # Detailed technical documentation
+├── PROJECT_SUMMARY.md    # This summary document
+├── requirements.txt      # Python dependencies
+└── README.md            # Project overview
 ```
 
 ## 🎯 Deliverables
