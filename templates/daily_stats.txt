@@ -1,0 +1,27 @@
+Daily Statistics Report - {{ date }}
+
+📊 PLATFORM METRICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👥 Users:
+   • Total Users: {{ total_users | default(0) }}
+   • New Signups: {{ new_signups | default(0) }}
+   • Active Sessions: {{ active_sessions | default(0) }}
+
+💰 Revenue:
+   • Total Revenue: ${{ revenue | default(0) }}
+   • Daily Growth: {{ daily_growth | default("0%") }}
+
+📈 Performance:
+   • Success Rate: {{ success_rate | default("0%") }}
+   • Average Response Time: {{ avg_response_time | default("0ms") }}
+
+🔍 Top Events:
+{% for event in top_events %}
+   • {{ event.name }}: {{ event.count }} occurrences
+{% endfor %}
+
+Generated at: {{ generation_timestamp }}
+
+---
+This is an automated report. For questions, contact {{ admin_email }}.

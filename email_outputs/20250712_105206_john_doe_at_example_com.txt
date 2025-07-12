@@ -1,0 +1,6 @@
+From: welcome@mycompany.com
+To: john.doe@example.com
+Subject: Welcome to Our Platform!
+Date: Sat, 12 Jul 2025 10:52:06 
+
+Hello John! Welcome to our amazing platform. We're excited to have you on board!

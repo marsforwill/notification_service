@@ -1,0 +1,20 @@
+Welcome to our platform, {{ user_name }}! 🎉
+
+We're excited to have you join our community. Here are your account details:
+
+📧 Email: {{ user_email }}
+📅 Registration Date: {{ registration_date }}
+🆔 User ID: {{ user_id }}
+
+Getting Started:
+• Complete your profile by visiting {{ profile_url }}
+• Explore our features at {{ features_url }}
+• Join our community forum at {{ community_url }}
+
+Need help? Contact our support team at {{ support_email }}
+
+Best regards,
+The {{ company_name }} Team
+
+---
+This is an automated message. Please do not reply to this email.

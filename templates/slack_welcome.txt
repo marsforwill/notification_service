@@ -1,0 +1,8 @@
+🎉 Welcome {{ user_name }} to our platform! 
+
+New user just signed up:
+• Email: {{ user_email }}
+• Registration Date: {{ registration_date }}
+• User ID: {{ user_id }}
+
+Let's make them feel welcome! 🚀
